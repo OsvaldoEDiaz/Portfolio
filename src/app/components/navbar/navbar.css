@@ -1,0 +1,233 @@
+/* =========================================
+    1. ESTILOS BASE DEL NAVBAR
+   ========================================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--accent-red);
+    transition: all 0.3s ease;
+}
+
+.light-mode .navbar {
+    background: rgba(245, 245, 245, 0.95);
+    border-bottom-color: var(--accent-red);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+/* =========================================
+    2. LOGO: DEO FULL STACK (ESTILO METAL/ELÉCTRICO)
+   ========================================= */
+.nav-logo {
+    cursor: pointer;
+    font-family: 'Metal Mania', system-ui;
+    font-size: clamp(1.5rem, 2vw, 1.8rem); 
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.logo-bracket {
+    color: var(--accent-red);
+    font-size: 2rem;
+}
+
+.logo-text {
+    color: #00d4ff; 
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.4);
+    transition: all 0.3s ease;
+}
+
+.logo-metal {
+    color: var(--accent-orange);
+    text-shadow: 0 0 10px var(--accent-red);
+}
+
+.nav-logo:hover .logo-text {
+    color: #00e5ff;
+    text-shadow: 0 0 15px rgba(0, 229, 255, 0.8);
+}
+
+/* =========================================
+    3. LINKS DE NAVEGACIÓN (CON EFECTO ELÉCTRICO)
+   ========================================= */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    text-decoration: none;
+}
+
+/* La línea inferior ahora es celeste con brillo */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #00d4ff; 
+    box-shadow: 0 0 8px rgba(0, 212, 255, 0.6);
+    transition: width 0.3s ease;
+}
+
+/* Efecto HOVER y ACTIVO en los links */
+.nav-links a:hover,
+.nav-links a.active {
+    color: #00d4ff;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.6);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* =========================================
+    4. BOTONES (IDIOMA Y TEMA)
+   ========================================= */
+.lang-btn, .theme-btn {
+    background: transparent;
+    border: 2px solid var(--accent-red);
+    color: var(--accent-red);
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+}
+
+.lang-btn:hover, .theme-btn:hover {
+    background: var(--accent-red);
+    color: white;
+    box-shadow: 0 0 15px var(--accent-red);
+}
+
+/* =========================================
+    5. MENÚ HAMBURGUESA (MÓVIL)
+   ========================================= */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    gap: 5px;
+    padding: 5px;
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--accent-red);
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* =========================================
+    6. RESPONSIVE (MEDIA QUERY PARA CELULARES)
+   ========================================= */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        /* Cambiamos de absolute a fixed para controlar la ventana lateral */
+        position: fixed;
+        top: 70px; /* Empieza justo debajo del navbar */
+        right: -100%; /* Lo escondemos completamente a la derecha fuera de la pantalla */
+        left: auto; /* Anulamos el left: 0 que venía de arriba */
+        width: 250px; /* Ancho del menú lateral */
+        height: calc(100vh - 70px); /* Ocupa todo el alto de la pantalla restante */
+        background: rgba(10, 10, 10, 0.98);
+        flex-direction: column;
+        padding: 40px 20px; /* Damos buen espacio interno */
+        gap: 30px;
+        transition: right 0.4s ease-in-out; /* Animación de deslizamiento suave */
+        border-bottom: none; /* Le sacamos el borde de abajo */
+        border-left: 2px solid var(--accent-red); /* Le ponemos una línea roja al borde izquierdo */
+    }
+
+    .light-mode .nav-links {
+        background: rgba(245, 245, 245, 0.98);
+    }
+
+    /* Cuando hacés clic y Angular le pone la clase "open", el menú entra a la pantalla */
+    .nav-links.open {
+        right: 0;
+    }
+} /* <--- ACÁ CIERRA EL MEDIA QUERY. Todo lo de abajo aplica en todos los tamaños */
+
+/* =========================================
+    7. AJUSTES PARA EL MODO CLARO (GLOBAL)
+   ========================================= */
+
+/* Logo en modo claro */
+.light-mode .logo-text {
+    color: #005bb5; 
+    text-shadow: none; 
+}
+
+.light-mode .nav-logo:hover .logo-text {
+    color: #003d82; 
+    text-shadow: 0 2px 4px rgba(0, 61, 130, 0.3); 
+}
+
+.light-mode .logo-metal {
+    color: #cc7a00; 
+    text-shadow: none;
+}
+
+/* Links en modo claro */
+.light-mode .nav-links a:hover,
+.light-mode .nav-links a.active {
+    color: #005bb5; 
+    text-shadow: 0 2px 4px rgba(0, 61, 130, 0.2);
+}
+
+.light-mode .nav-links a::after {
+    background: #005bb5;
+    box-shadow: none; 
+}

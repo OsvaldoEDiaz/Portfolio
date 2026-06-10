@@ -1,0 +1,172 @@
+/* =========================================
+    1. CONTENEDOR PRINCIPAL
+   ========================================= */
+.hero-container {
+    position: relative;
+    height: 100vh; /* Ocupa toda la pantalla completa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--bg-primary);
+    text-align: center;
+}
+
+/* =========================================
+    2. SISTEMA DE PARTÍCULAS CSS
+   ========================================= */
+.particles-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none; /* Para que no molesten al hacer click en los botones */
+}
+
+.particle {
+    position: absolute;
+    bottom: -10px;
+    border-radius: 50%;
+    opacity: 0;
+    animation: floatUp 8s infinite linear;
+}
+
+/* Chispas Celestes/Eléctricas */
+.p-blue {
+    width: 6px;
+    height: 6px;
+    background: #00d4ff;
+    box-shadow: 0 0 15px #00d4ff, 0 0 30px #00d4ff;
+    left: 20%;
+}
+
+/* Chispas Rojas/Metal */
+.p-red {
+    width: 8px;
+    height: 8px;
+    background: var(--accent-red);
+    box-shadow: 0 0 15px var(--accent-red), 0 0 30px var(--accent-red);
+    left: 60%;
+}
+
+/* Posiciones y tiempos aleatorios para que sea orgánico */
+.p-blue.delay-1 { left: 80%; animation-duration: 12s; animation-delay: 2s; }
+.p-red.delay-2 { left: 40%; animation-duration: 10s; animation-delay: 4s; }
+.p-blue.delay-3 { left: 10%; animation-duration: 15s; animation-delay: 1s; }
+.p-red.delay-1 { left: 90%; animation-duration: 9s; animation-delay: 5s; }
+
+@keyframes floatUp {
+    0% { transform: translateY(0) scale(0.5); opacity: 0; }
+    20% { opacity: 0.8; transform: translateY(-20vh) scale(1); }
+    80% { opacity: 0.5; transform: translateY(-80vh) scale(1.2); }
+    100% { transform: translateY(-100vh) scale(0.5); opacity: 0; }
+}
+
+/* =========================================
+    3. CONTENIDO (TEXTOS Y BOTONES)
+   ========================================= */
+.hero-content {
+    position: relative;
+    z-index: 10;
+    padding: 0 20px;
+    margin-top: 50px; /* Para esquivar el navbar */
+}
+
+.hero-title {
+    font-family: 'Metal Mania', system-ui;
+    font-size: clamp(3rem, 8vw, 6rem); /* Responsive automático */
+    color: var(--text-primary);
+    margin: 0;
+    letter-spacing: 4px;
+    text-shadow: 3px 3px 0px var(--accent-red);
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    color: #00d4ff;
+    margin: 20px 0 40px 0;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.4);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* En celular caen uno debajo del otro */
+}
+
+/* =========================================
+    4. ESTILOS DE LOS BOTONES
+   ========================================= */
+.btn {
+    padding: 15px 30px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background: var(--accent-red);
+    color: white;
+    border: 2px solid var(--accent-red);
+    box-shadow: 0 0 15px rgba(229, 9, 20, 0.4);
+}
+
+.btn-primary:hover {
+    background: transparent;
+    color: var(--accent-red);
+    box-shadow: 0 0 30px rgba(229, 9, 20, 0.8);
+}
+
+.btn-outline {
+    background: transparent;
+    color: #00d4ff;
+    border: 2px solid #00d4ff;
+}
+
+.btn-outline:hover {
+    background: #00d4ff;
+    color: var(--bg-primary);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+}
+
+/* =========================================
+    5. MODO CLARO (ADAPTACIÓN)
+   ========================================= */
+.light-mode .hero-title {
+    text-shadow: 2px 2px 0px rgba(229, 9, 20, 0.5);
+}
+
+.light-mode .hero-subtitle {
+    color: #005bb5;
+    text-shadow: none;
+}
+
+.light-mode .btn-outline {
+    color: #005bb5;
+    border-color: #005bb5;
+}
+
+.light-mode .btn-outline:hover {
+    background: #005bb5;
+    color: white;
+    box-shadow: 0 0 20px rgba(0, 91, 181, 0.4);
+}
+
+/* En modo claro bajamos la intensidad de las partículas */
+.light-mode .particle {
+    opacity: 0;
+    mix-blend-mode: multiply;
+}

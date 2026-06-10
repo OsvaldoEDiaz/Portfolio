@@ -1,0 +1,26 @@
+{
+    "hero": {
+        "title": "Full Stack Developer",
+        "subtitle": "Desarrollador Web & Apps | Técnico en Computación",
+        "btnProject": "Ver mi Proyecto Principal",
+        "btnCV": "Descargar CV",
+        "btnContact": "Contactame"
+    },
+    "nav": {
+        "about": "Acerca de Mi",
+        "skills": "Habilidades",
+        "projects": "Mis Proyectos",
+        "education": "Mi Educación",
+        "contact": "Contactarme"
+    },
+    "about": {
+        "title": "Sobre Mí",
+        "subtitle": "De reparar PCs a construir aplicaciones",
+        "p1": "Mi camino en la tecnología empezó desde los componentes físicos, diagnosticando y optimizando sistemas. Esa mentalidad analítica y de resolución de problemas me llevó a dar el salto lógico hacia el desarrollo de software Full Stack.",
+        "p2": "Disfruto construyendo arquitecturas robustas en el backend y experiencias dinámicas en el frontend. No le escapo a los desafíos técnicos complejos; al contrario, me motivan.",
+        "quote": "Como en el metal: disciplina, precisión y pasión por lo que hago.",
+        "time1": "Técnico en Computación",
+        "time2": "Full Stack Developer + Java",
+        "time3": "Freelance & Nuevos Desafíos"
+    }
+}

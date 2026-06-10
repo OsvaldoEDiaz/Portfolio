@@ -1,0 +1,26 @@
+{
+    "hero": {
+        "title": "Full Stack Developer",
+        "subtitle": "Web & App Developer | Computer Technician",
+        "btnProject": "View Main Project",
+        "btnCV": "Download Resume",
+        "btnContact": "Contact Me"
+    },
+    "nav": {
+        "about": "About Me",
+        "skills": "Skills",
+        "projects": "My Projects",
+        "education": "My Education",
+        "contact": "Contact Me"
+    },
+    "about": {
+        "title": "About Me",
+        "subtitle": "From repairing PCs to building applications",
+        "p1": "My tech journey began with hardware, diagnosing and optimizing systems. That analytical and troubleshooting mindset led me to take the logical leap into Full Stack software development.",
+        "p2": "I enjoy building robust architectures in the backend and dynamic experiences in the frontend. I don't run away from complex technical challenges; on the contrary, they motivate me.",
+        "quote": "Like in metal: discipline, precision, and passion for what I do.",
+        "time1": "Computer Technician",
+        "time2": "Full Stack Developer + Java",
+        "time3": "Freelance & New Challenges"
+    }
+}

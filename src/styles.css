@@ -1,0 +1,27 @@
+/* Paleta por defecto: Heavy Metal Dark */
+:root {
+  --bg-primary: #0a0a0a; /* Negro carbón [cite: 14] */
+  --bg-secondary: #1a1a1a; /* Gris oscuro [cite: 14] */
+  --accent-red: #e50914; /* Rojo sangre/Metal [cite: 14] */
+  --accent-orange: #ff9500; /* Dorado/Naranja fuego [cite: 14] */
+  --text-primary: #f0f0f0; /* Blanco hueso [cite: 14] */
+  --text-secondary: #a0a0a0; /* Gris medio [cite: 14] */
+}
+
+/* Modo claro: Inversión de colores */
+.light-mode {
+    --bg-primary: #f5f5f5; /* Fondo claro [cite: 15] */
+    --bg-secondary: #e0e0e0;
+    --text-primary: #1a1a1a; /* Texto oscuro [cite: 15] */
+    --text-secondary: #4a4a4a;
+    /* Los acentos rojos se mantienen igual en modo claro [cite: 15] */
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}

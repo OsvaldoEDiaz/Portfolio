@@ -1,0 +1,33 @@
+<nav class="navbar">
+    <div class="nav-container">
+        <a class="nav-logo" routerLink="/">
+            <span class="logo-text">DEO FULL STACK</span>
+        </a>
+
+        <button class="nav-toggle" (click)="toggleMenu()" [class.active]="menuOpen">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-links" [class.open]="menuOpen">
+            <a routerLink="/about" routerLinkActive="active" (click)="toggleMenu()">{{ lang.t('nav.about') }}</a>
+            <a routerLink="/skills" routerLinkActive="active" (click)="toggleMenu()">{{ lang.t('nav.skills') }}</a>
+            <a routerLink="/projects" routerLinkActive="active" (click)="toggleMenu()">{{ lang.t('nav.projects') }}</a>
+            <a routerLink="/education" routerLinkActive="active" (click)="toggleMenu()">{{ lang.t('nav.education') }}</a>
+            <a routerLink="/contact" routerLinkActive="active" (click)="toggleMenu()">{{ lang.t('nav.contact') }}</a>
+                
+        <button class="lang-btn" (click)="lang.toggleLanguage()">
+            {{ lang.currentLang() === 'es' ? 'ES' : 'EN' }}
+        </button>
+        
+        <button class="theme-btn" (click)="theme.toggleTheme()">
+            @if (theme.isDarkMode()) {
+                <span>☀️</span>
+            } @else {
+                <span>🌙</span>
+            }
+        </button>
+        </div>
+    </div>
+</nav>
