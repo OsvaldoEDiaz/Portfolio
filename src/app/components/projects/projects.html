@@ -1,1 +1,48 @@
-<p>projects works!</p>
+<section id="projects" class="projects-section">
+    <div class="projects-container">
+        
+        <div class="projects-header">
+            <h2 class="section-title">{{ lang.t('projects.title') }}</h2>
+            <h3 class="section-subtitle">{{ lang.t('projects.subtitle') }}</h3>
+        </div>
+
+        <div class="main-project-card">
+            
+            <div class="project-visual">
+                <div class="browser-mockup">
+                    <div class="browser-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="project-image-placeholder">
+                        <span class="placeholder-text">IMAGEN O GIF DEL PROYECTO</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-info">
+                <h3 class="project-name">{{ lang.t('projects.marketName') }}</h3>
+                <p class="project-stack">{{ lang.t('projects.marketStack') }}</p>
+                
+                <p class="project-desc">{{ lang.t('projects.marketDesc') }}</p>
+                
+                <div class="project-tags">
+                    <span class="tech-tag">Angular</span>
+                    <span class="tech-tag">Django REST</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">JWT Auth</span>
+                    <span class="tech-tag accent-mp">MercadoPago API</span>
+                    <span class="tech-tag accent-crypto">USDT TRC20</span>
+                </div>
+
+                <div class="project-actions">
+                    <a href="#" class="btn btn-primary" target="_blank">{{ lang.t('projects.btnDemo') }}</a>
+                    <a href="#" class="btn btn-outline" target="_blank">
+                        <span class="icon">💻</span> {{ lang.t('projects.btnCode') }}
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+</section>

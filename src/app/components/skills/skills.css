@@ -1,0 +1,270 @@
+/* =========================================
+    1. ESTRUCTURA Y CONTENEDOR
+   ========================================= */
+.skills-section {
+    padding: 100px 20px;
+    background-color: var(--bg-primary); /* Vuelve al fondo más oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    transition: background-color 0.3s ease;
+}
+
+.skills-container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.skills-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-family: 'Metal Mania', system-ui;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--text-primary);
+    margin: 0 0 10px 0;
+    letter-spacing: 2px;
+}
+
+.section-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: #00d4ff;
+    margin: 0;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+    2. GRILLA DE CATEGORÍAS (CARDS)
+   ========================================= */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.skill-card {
+    background: var(--bg-secondary);
+    border: 1px solid rgba(229, 9, 20, 0.2);
+    border-top: 3px solid var(--accent-red); /* Detalle superior metalero */
+    border-radius: 8px;
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(229, 9, 20, 0.2);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 10px;
+}
+
+.card-header .icon {
+    font-size: 1.8rem;
+}
+
+.card-header h4 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+/* =========================================
+    3. TAGS CON HOVER EFFECTS (MAGIA ELÉCTRICA)
+   ========================================= */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tech-tag {
+    background: rgba(0, 0, 0, 0.4);
+    color: var(--text-secondary);
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: default;
+    transition: all 0.3s ease;
+}
+
+/* Hover general (Brillo Celeste) */
+.tech-tag:hover {
+    background: transparent;
+    color: #00d4ff;
+    border-color: #00d4ff;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.4), inset 0 0 10px rgba(0, 212, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* Hovers Personalizados (Opcional, para destacar tus fuertes) */
+.tech-tag.accent-angular:hover {
+    color: #dd0031;
+    border-color: #dd0031;
+    box-shadow: 0 0 10px rgba(221, 0, 49, 0.4), inset 0 0 10px rgba(221, 0, 49, 0.2);
+}
+
+.tech-tag.accent-python:hover {
+    color: #ffd43b;
+    border-color: #ffd43b;
+    box-shadow: 0 0 10px rgba(255, 212, 59, 0.4), inset 0 0 10px rgba(255, 212, 59, 0.2);
+}
+
+.tech-tag.accent-java:hover {
+    color: #f89820;
+    border-color: #f89820;
+    box-shadow: 0 0 10px rgba(248, 152, 32, 0.4), inset 0 0 10px rgba(248, 152, 32, 0.2);
+}
+
+/* =========================================
+    4. ADAPTACIÓN AL MODO CLARO
+   ========================================= */
+.light-mode .skills-section {
+    background-color: var(--bg-primary); /* Gris muy claro del app.css */
+}
+
+.light-mode .section-subtitle {
+    color: #005bb5;
+}
+
+.light-mode .skill-card {
+    background: var(--bg-secondary);
+    border-color: rgba(0, 0, 0, 0.1);
+    border-top-color: var(--accent-red);
+}
+
+.light-mode .skill-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(229, 9, 20, 0.1);
+}
+
+.light-mode .card-header {
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .tech-tag {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .tech-tag:hover {
+    background: transparent;
+    color: #005bb5;
+    border-color: #005bb5;
+    box-shadow: 0 0 8px rgba(0, 91, 181, 0.3), inset 0 0 8px rgba(0, 91, 181, 0.1);
+}
+
+/* =========================================
+    5. VENTANA EMERGENTE (MODAL TECNOLÓGICO)
+   ========================================= */
+.skill-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; /* Asegura que esté por encima del navbar */
+    animation: fadeIn 0.3s ease;
+}
+
+.skill-modal-content {
+    background: var(--bg-primary);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    padding: 40px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 212, 255, 0.1);
+    animation: slideUp 0.3s ease;
+}
+
+/* Detalle luminoso superior */
+.modal-border-top {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 3px;
+    background: #00d4ff;
+    box-shadow: 0 0 10px #00d4ff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.modal-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    margin: 0 0 15px 0;
+    letter-spacing: 2px;
+    color: var(--text-primary);
+}
+
+.modal-body {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.modal-close-btn {
+    background: transparent;
+    border: 1px solid var(--accent-red);
+    color: var(--accent-red);
+    padding: 10px 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.modal-close-btn:hover {
+    background: var(--accent-red);
+    color: white;
+    box-shadow: 0 0 15px rgba(229, 9, 20, 0.5);
+}
+
+/* Colores dinámicos de los títulos del modal */
+.text-angular { color: #dd0031; text-shadow: 0 0 10px rgba(221, 0, 49, 0.4); }
+.text-python { color: #ffd43b; text-shadow: 0 0 10px rgba(255, 212, 59, 0.4); }
+.text-java { color: #f89820; text-shadow: 0 0 10px rgba(248, 152, 32, 0.4); }
+.text-blue { color: #00d4ff; text-shadow: 0 0 10px rgba(0, 212, 255, 0.4); }
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Adaptación a Modo Claro */
+.light-mode .skill-modal-content {
+    background: var(--bg-secondary);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}

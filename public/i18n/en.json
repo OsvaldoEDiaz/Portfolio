@@ -22,5 +22,41 @@
         "time1": "Computer Technician",
         "time2": "Full Stack Developer + Java",
         "time3": "Freelance & New Challenges"
+    },
+    "skills": {
+        "title": "Technical Arsenal",
+        "subtitle": "The tools with which I forge the code",
+        "catFrontend": "Frontend",
+        "catBackend": "Backend",
+        "catMobile": "Mobile",
+        "catDb": "Databases",
+        "catTools": "Tools",
+        "catOthers": "Others"
+    },
+    "desc": {
+        "angular": "Development of scalable and reactive SPAs. Experience working with version 21, optimizing components using Signals and Server-Side Rendering (SSR).",
+        "typescript": "Strict typing for secure, maintainable, and error-proof code in complex architectures.",
+        "html": "Creation of semantic and accessible structures, ensuring a solid and optimized foundation for search engine optimization (SEO).",
+        "css": "Design of responsive mobile-first interfaces. Mastery of Flexbox, Grid, and pure CSS animations for fluid visual experiences.",
+        "js": "Development of asynchronous logic, advanced DOM manipulation, and efficient consumption of REST APIs to bring applications to life.",
+        "python": "Creation of robust and secure backends with Django. Development of complex data models and construction of scalable APIs.",
+        "java": "Building solid business logic and object-oriented design patterns for enterprise systems.",
+        "android": "Creation of native mobile applications focused on performance, efficient memory management, and user experience.",
+        "mysql": "Design of relational schemas and optimization of complex queries for efficient management in high-demand systems.",
+        "sqlite": "Implementation of lightweight and fast databases, ideal for applications with local storage or development environments.",
+        "postgres": "Handling advanced relational databases, ensuring integrity, concurrency, and massive scalability of data.",
+        "tools": "Configuration and advanced handling of cross-platform development environments (Windows and Linux), maximizing software lifecycle productivity.",
+        "git": "Distributed version control. Expert handling of branching and clean workflows to ensure the integrity of the source code.",
+        "pc": "Deep diagnosis, assembly, and hardware optimization. This 'low-level' vision allows me to understand and optimize how software physically impacts the machine."
+    },
+    "projects": {
+        "title": "Main Project",
+        "subtitle": "Where code becomes a real product",
+        "marketName": "E-Commerce Marketplace",
+        "marketStack": "Full Stack Application | Angular + Django REST + MySQL",
+        "marketDesc": "Scalable e-commerce platform developed from scratch. The architecture includes secure authentication (JWT), dynamic shopping cart, and a complete admin panel. It stands out for its integration with payment gateways (MercadoPago) and an advanced balance management system with support for cryptocurrency withdrawals (USDT TRC20).",
+        "btnDemo": "View Live Demo",
+        "btnCode": "View Code",
+        "btnDetails": "Technical Details"
     }
 }

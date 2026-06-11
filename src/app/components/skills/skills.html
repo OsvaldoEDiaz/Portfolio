@@ -1,1 +1,96 @@
-<p>skills works!</p>
+<section id="skills" class="skills-section">
+    <div class="skills-container">
+        
+        <div class="skills-header">
+            <h2 class="section-title">{{ lang.t('skills.title') }}</h2>
+            <h3 class="section-subtitle">{{ lang.t('skills.subtitle') }}</h3>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="card-header">
+                    <span class="icon">💻</span>
+                    <h4>{{ lang.t('skills.catFrontend') }}</h4>
+                </div>
+                <div class="tags-container">
+                    <span class="tech-tag" (click)="openSkill('HTML5', 'skills.desc.html')">HTML5</span>
+                    <span class="tech-tag" (click)="openSkill('CSS3', 'skills.desc.css')">CSS3</span>
+                    <span class="tech-tag" (click)="openSkill('JavaScript', 'skills.desc.js')">JavaScript</span>
+                    <span class="tech-tag accent-blue" (click)="openSkill('TypeScript', 'skills.desc.typescript', 'text-blue')">TypeScript</span>
+                    <span class="tech-tag accent-angular" (click)="openSkill('Angular', 'skills.desc.angular', 'text-angular')">Angular</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="card-header">
+                    <span class="icon">⚙️</span>
+                    <h4>{{ lang.t('skills.catBackend') }}</h4>
+                </div>
+                <div class="tags-container">
+                    <span class="tech-tag accent-python" (click)="openSkill('Python (Django)', 'skills.desc.python', 'text-python')">Python (Django)</span>
+                    <span class="tech-tag accent-java" (click)="openSkill('Java', 'skills.desc.java', 'text-java')">Java</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="card-header">
+                    <span class="icon">📱</span>
+                    <h4>{{ lang.t('skills.catMobile') }}</h4>
+                </div>
+                <div class="tags-container">
+                    <span class="tech-tag accent-java" (click)="openSkill('Android (Java)', 'skills.desc.android', 'text-java')">Android (Java)</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="card-header">
+                    <span class="icon">🗄️</span>
+                    <h4>{{ lang.t('skills.catDb') }}</h4>
+                </div>
+                <div class="tags-container">
+                    <span class="tech-tag" (click)="openSkill('MySQL', 'skills.desc.mysql')">MySQL</span>
+                    <span class="tech-tag" (click)="openSkill('SQLite', 'skills.desc.sqlite')">SQLite</span>
+                    <span class="tech-tag accent-blue" (click)="openSkill('PostgreSQL', 'skills.desc.postgres', 'text-blue')">PostgreSQL</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="card-header">
+                    <span class="icon">🛠️</span>
+                    <h4>{{ lang.t('skills.catTools') }}</h4>
+                </div>
+                <div class="tags-container">
+                    <span class="tech-tag accent-blue" (click)="openSkill('VS Code', 'skills.desc.tools', 'text-blue')">VS Code</span>
+                    <span class="tech-tag" (click)="openSkill('IntelliJ IDEA', 'skills.desc.tools')">IntelliJ IDEA</span>
+                    <span class="tech-tag" (click)="openSkill('MySQL Workbench', 'skills.desc.tools')">MySQL Workbench</span>
+                    <span class="tech-tag" (click)="openSkill('Git', 'skills.desc.git')">Git</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="card-header">
+                    <span class="icon">⭐</span>
+                    <h4>{{ lang.t('skills.catOthers') }}</h4>
+                </div>
+                <div class="tags-container">
+                    <span class="tech-tag" (click)="openSkill('Reparación de PC', 'skills.desc.pc')">Reparación de PC</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @if (selectedSkill(); as skill) {
+        <div class="skill-modal-overlay" (click)="closeSkill()">
+            <div class="skill-modal-content" (click)="$event.stopPropagation()">
+                <div class="modal-border-top"></div>
+                
+                <h3 class="modal-title" [class]="skill.colorClass">{{ skill.name }}</h3>
+                <p class="modal-body">{{ lang.t(skill.descriptionKey) }}</p>
+                
+                <button class="modal-close-btn" (click)="closeSkill()">
+                    {{ lang.t('skills.closeModal') }}
+                </button>
+            </div>
+        </div>
+    }
+</section>

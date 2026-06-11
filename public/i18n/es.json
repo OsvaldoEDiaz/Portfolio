@@ -22,5 +22,42 @@
         "time1": "Técnico en Computación",
         "time2": "Full Stack Developer + Java",
         "time3": "Freelance & Nuevos Desafíos"
-    }
+    },
+    "skills": {
+        "title": "Arsenal Técnico",
+        "subtitle": "Las herramientas con las que forjo el código",
+        "catFrontend": "Frontend",
+        "catBackend": "Backend",
+        "catMobile": "Mobile",
+        "catDb": "Bases de Datos",
+        "catTools": "Entornos & Herramientas",
+        "catOthers": "Otros",
+        "closeModal": "CERRAR",
+        "desc": {
+            "angular": "Desarrollo de SPAs escalables y reactivas. Experiencia trabajando con la versión 21, optimización de componentes usando Signals y Server-Side Rendering (SSR).",
+            "typescript": "Tipado estricto para código seguro, mantenible y a prueba de errores en arquitecturas complejas.",
+            "html": "Creación de estructuras semánticas y accesibles, garantizando una base sólida y optimizada para el posicionamiento web (SEO).",
+            "css": "Diseño de interfaces responsivas mobile-first. Dominio de Flexbox, Grid y animaciones CSS puras para experiencias visuales fluidas.",
+            "js": "Desarrollo de lógica asíncrona, manipulación avanzada del DOM y consumo eficiente de APIs REST para dar vida a las aplicaciones.",
+            "python": "Creación de backends robustos y seguros con Django. Desarrollo de modelos de datos complejos y construcción de APIs escalables.",
+            "java": "Construcción de lógica de negocio sólida y patrones de diseño orientados a objetos para sistemas empresariales.",
+            "android": "Creación de aplicaciones móviles nativas centradas en el rendimiento, manejo eficiente de memoria y experiencia de usuario.",
+            "mysql": "Diseño de esquemas relacionales y optimización de consultas complejas para gestión eficiente en sistemas de alta demanda.",
+            "sqlite": "Implementación de bases de datos ligeras y rápidas, ideales para aplicaciones con almacenamiento local o entornos de desarrollo.",
+            "postgres": "Manejo de bases de datos relacionales avanzadas, asegurando la integridad, concurrencia y escalabilidad masiva de los datos.",
+            "tools": "Configuración y manejo avanzado de entornos de desarrollo multiplataforma (Windows y Linux), maximizando la productividad del ciclo de vida del software.",
+            "git": "Control de versiones distribuido. Manejo experto de ramas (branching) y flujos de trabajo limpios para asegurar la integridad del código fuente.",
+            "pc": "Diagnóstico profundo, ensamblaje y optimización de hardware. Esta visión de 'bajo nivel' me permite entender y optimizar cómo el software impacta físicamente en la máquina."
+        },
+        "projects": {
+            "title": "Proyecto Principal",
+            "subtitle": "Donde el código se convierte en un producto real",
+            "marketName": "Marketplace E-Commerce",
+            "marketStack": "Full Stack Application | Angular + Django REST + MySQL",
+            "marketDesc": "Plataforma de comercio electrónico escalable desarrollada desde cero. La arquitectura incluye autenticación segura (JWT), carrito de compras dinámico y un panel de administración completo. Destaca por su integración con pasarelas de pago (MercadoPago) y un sistema avanzado de gestión de saldos con soporte para retiros en criptomonedas (USDT TRC20).",
+            "btnDemo": "Ver Demo en Vivo",
+            "btnCode": "Ver Código",
+            "btnDetails": "Detalles Técnicos"
+        }
+    }    
 }
