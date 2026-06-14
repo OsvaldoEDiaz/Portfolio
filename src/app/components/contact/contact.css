@@ -1,0 +1,262 @@
+/* =========================================
+    1. ESTRUCTURA BASE Y TÍTULOS
+   ========================================= */
+.contact-section {
+    padding: 100px 20px;
+    background-color: var(--bg-secondary);
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-container {
+    max-width: 1000px;
+    width: 100%;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* Clonamos el estilo Heavy Metal de las secciones anteriores */
+.section-title {
+    font-family: 'Metal Mania', system-ui;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--text-primary);
+    margin: 0 0 10px 0;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 0px var(--accent-red);
+    text-transform: uppercase;
+}
+
+.section-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: #00d4ff;
+    margin: 0;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+    2. GRILLA DE CONTACTO
+   ========================================= */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
+    background: var(--bg-primary);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 212, 255, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Info Directa (Izquierda) */
+.info-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.info-desc {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.info-icon {
+    font-size: 1.5rem;
+}
+
+.info-link, .info-text {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.info-link:hover {
+    color: #00d4ff;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+/* =========================================
+    3. FORMULARIO ESTILO CIBERNÉTICO
+   ========================================= */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 0;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* La etiqueta flotante */
+.input-group label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* La magia: Cuando hacés foco o hay texto, la etiqueta sube y se achica */
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label,
+.input-group textarea:focus ~ label,
+.input-group textarea:not(:placeholder-shown) ~ label {
+    top: -20px;
+    font-size: 0.85rem;
+    color: #00d4ff;
+}
+
+/* Efecto de borde eléctrico al hacer foco */
+.input-group input:focus,
+.input-group textarea:focus {
+    border-bottom-color: #00d4ff;
+    box-shadow: 0 2px 5px rgba(0, 212, 255, 0.2);
+}
+
+.submit-btn {
+    align-self: flex-start;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* =========================================
+    4. BOTÓN DE WHATSAPP FLOTANTE
+   ========================================= */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    z-index: 9000; /* Siempre por encima */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wa-icon {
+    width: 35px;
+    height: 35px;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+/* =========================================
+    5. RESPONSIVE Y MODO CLARO
+   ========================================= */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+    .wa-icon { width: 30px; height: 30px; }
+}
+
+/* Adaptación Modo Claro */
+.light-mode .contact-section { background-color: var(--bg-primary); }
+.light-mode .contact-grid {
+    background: var(--bg-secondary);
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+.light-mode .section-title { text-shadow: 2px 2px 0px rgba(229, 9, 20, 0.5); }
+.light-mode .section-subtitle { color: #005bb5; }
+.light-mode .input-group input, .light-mode .input-group textarea {
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+}
+.light-mode .input-group input:focus ~ label,
+.light-mode .input-group textarea:focus ~ label {
+    color: #005bb5;
+}
+.light-mode .input-group input:focus,
+.light-mode .input-group textarea:focus {
+    border-bottom-color: #005bb5;
+}
+
+/* =========================================
+    ESTILO DEL BOTÓN DE ENVIAR (CON VIDA)
+   ========================================= */
+.submit-btn {
+    background: var(--accent-red);
+    color: white;
+    border: 2px solid var(--accent-red);
+    box-shadow: 0 0 15px rgba(229, 9, 20, 0.4); /* Sombreado rojo sutil */
+    padding: 15px 30px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer; /* ¡Acá está la magia de la manito! */
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Efecto al pasar el mouse por encima (Hover) */
+.submit-btn:hover {
+    background: transparent;
+    color: var(--accent-red);
+    box-shadow: 0 0 25px rgba(229, 9, 20, 0.8); /* El brillo se intensifica */
+    transform: scale(1.03); /* Se agranda un cachito de forma fluida */
+}
+
+/* Adaptación del botón para el Modo Claro */
+.light-mode .submit-btn {
+    box-shadow: 0 4px 10px rgba(229, 9, 20, 0.2);
+}
+
+.light-mode .submit-btn:hover {
+    background: var(--accent-red);
+    color: white;
+    box-shadow: 0 6px 15px rgba(229, 9, 20, 0.4);
+}

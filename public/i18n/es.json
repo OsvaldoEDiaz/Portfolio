@@ -48,16 +48,40 @@
             "tools": "Configuración y manejo avanzado de entornos de desarrollo multiplataforma (Windows y Linux), maximizando la productividad del ciclo de vida del software.",
             "git": "Control de versiones distribuido. Manejo experto de ramas (branching) y flujos de trabajo limpios para asegurar la integridad del código fuente.",
             "pc": "Diagnóstico profundo, ensamblaje y optimización de hardware. Esta visión de 'bajo nivel' me permite entender y optimizar cómo el software impacta físicamente en la máquina."
-        },
-        "projects": {
-            "title": "Proyecto Principal",
-            "subtitle": "Donde el código se convierte en un producto real",
-            "marketName": "Marketplace E-Commerce",
-            "marketStack": "Full Stack Application | Angular + Django REST + MySQL",
-            "marketDesc": "Plataforma de comercio electrónico escalable desarrollada desde cero. La arquitectura incluye autenticación segura (JWT), carrito de compras dinámico y un panel de administración completo. Destaca por su integración con pasarelas de pago (MercadoPago) y un sistema avanzado de gestión de saldos con soporte para retiros en criptomonedas (USDT TRC20).",
-            "btnDemo": "Ver Demo en Vivo",
-            "btnCode": "Ver Código",
-            "btnDetails": "Detalles Técnicos"
         }
-    }    
+    },
+    "projects": {
+        "title": "Proyecto Principal",
+        "subtitle": "Donde el código se convierte en un producto real",
+        "marketName": "Marketplace E-Commerce",
+        "marketStack": "Full Stack Application | Angular + Django REST + MySQL",
+        "marketDesc": "Plataforma de comercio electrónico escalable desarrollada desde cero. La arquitectura incluye autenticación segura (JWT), carrito de compras dinámico y un panel de administración completo. Destaca por su integración con pasarelas de pago (MercadoPago) y un sistema avanzado de gestión de saldos con soporte para retiros en criptomonedas (USDT TRC20).",
+        "btnDemo": "Ver Demo en Vivo",
+        "btnCode": "Ver Código",
+        "btnDetails": "Detalles Técnicos"
+    },
+    "education": {
+        "title": "Formación Académica",
+        "subtitle": "La forja de mi conocimiento técnico",
+        "ispcTitle": "Técnico Superior en Desarrollo Web y Aplicaciones Digitales",
+        "ispcInst": "Instituto Superior Politécnico de Córdoba (ISPC)",
+        "utnTitle": "Java Inicial e Intermedio",
+        "utnInst": "Universidad Tecnológica Nacional (UTN)",
+        "juanaTitle": "Técnico en Computación",
+        "juanaInst": "Escuela Técnica N°1 Juana Manso"
+    },
+    "contact": {
+        "title": "Contacto",
+        "subtitle": "Iniciemos un nuevo proyecto",
+        "nameLabel": "Tu Nombre",
+        "emailLabel": "Tu Correo",
+        "msgLabel": "Tu Mensaje",
+        "btnSend": "ENVIAR MENSAJE",
+        "infoTitle": "Información Directa",
+        "infoDesc": "¿Preferís un trato más directo? Escribime por WhatsApp o mandame un mail tradicional."
+    },
+        "footer": {
+        "copyright": "© 2026 Todos los derechos reservados.",
+        "madeWith": "Forjado con"
+    } 
 }

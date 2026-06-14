@@ -13,16 +13,42 @@
                     <div class="browser-dots">
                         <span></span><span></span><span></span>
                     </div>
-                    <div class="project-image-placeholder">
-                        <span class="placeholder-text">IMAGEN O GIF DEL PROYECTO</span>
+                    
+                    <div class="gallery-container">
+                        <div class="gallery-main" (click)="toggleFullscreen()">
+                            <img [src]="galleryImages[currentImageIndex()]" alt="Captura del Marketplace" class="main-img">
+                            
+                            <button class="gallery-btn btn-prev" (click)="prevImage($event)">❮</button>
+                            <button class="gallery-btn btn-next" (click)="nextImage($event)">❯</button>
+                            
+                            <div class="expand-icon">⛶</div>
+                        </div>
+
+                        <div class="gallery-thumbnails">
+                            @for (img of galleryImages; track $index) {
+                                <div class="thumb-box" 
+                                    [class.active]="$index === currentImageIndex()"
+                                    (click)="setCurrentImage($index)">
+                                    <img [src]="img" alt="Miniatura" loading="lazy">
+                                </div>
+                            }
+                        </div>
                     </div>
+
                 </div>
             </div>
 
             <div class="project-info">
-                <h3 class="project-name">{{ lang.t('projects.marketName') }}</h3>
-                <p class="project-stack">{{ lang.t('projects.marketStack') }}</p>
+                <a href="https://everdiv.com.ar" target="_blank" class="everdiv-logo-container">
+                    <span class="everdiv-icon">
+                        <img src="/img/star.png" alt="Estrella" class="estrella-everdiv">
+                    </span>
+                    <span class="everdiv-brand-text">
+                        <img src="/img/everdiv5.png" alt="EVERDIV" class="everdiv-text-img">
+                    </span>
+                </a>
                 
+                <p class="project-stack">Marketplace | {{ lang.t('projects.marketStack') }}</p>
                 <p class="project-desc">{{ lang.t('projects.marketDesc') }}</p>
                 
                 <div class="project-tags">
@@ -35,7 +61,7 @@
                 </div>
 
                 <div class="project-actions">
-                    <a href="#" class="btn btn-primary" target="_blank">{{ lang.t('projects.btnDemo') }}</a>
+                    <a href="https://everdiv.com.ar" class="btn btn-primary" target="_blank">{{ lang.t('projects.btnDemo') }}</a>
                     <a href="#" class="btn btn-outline" target="_blank">
                         <span class="icon">💻</span> {{ lang.t('projects.btnCode') }}
                     </a>
@@ -43,6 +69,22 @@
             </div>
             
         </div>
-
     </div>
 </section>
+
+@if (isFullscreen()) {
+    <div class="fullscreen-overlay" (click)="toggleFullscreen()">
+        <button class="close-fullscreen">✕</button>
+        
+        <div class="fullscreen-content" (click)="$event.stopPropagation()">
+            <img [src]="galleryImages[currentImageIndex()]" alt="Captura ampliada" class="fullscreen-img">
+            
+            <button class="fs-btn fs-prev" (click)="prevImage($event)">❮</button>
+            <button class="fs-btn fs-next" (click)="nextImage($event)">❯</button>
+        </div>
+        
+        <div class="fs-counter">
+            {{ currentImageIndex() + 1 }} / {{ galleryImages.length }}
+        </div>
+    </div>
+}

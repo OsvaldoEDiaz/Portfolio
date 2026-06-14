@@ -1,9 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../../services/language';
 
 @Component({
   selector: 'app-contact',
+  standalone: true,
   imports: [],
   templateUrl: './contact.html',
-  styleUrl: './contact.css',
+  styleUrl: './contact.css'
 })
-export class Contact {}
+export class Contact {
+  lang = inject(LanguageService);
+}

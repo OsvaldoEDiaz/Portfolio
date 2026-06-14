@@ -58,5 +58,29 @@
         "btnDemo": "View Live Demo",
         "btnCode": "View Code",
         "btnDetails": "Technical Details"
+    },
+    "education": {
+        "title": "Academic Background",
+        "subtitle": "The forge of my technical knowledge",
+        "ispcTitle": "Higher Technician in Web Development & Digital Apps",
+        "ispcInst": "Instituto Superior Politécnico de Córdoba (ISPC)",
+        "utnTitle": "Java Initial & Intermediate",
+        "utnInst": "Universidad Tecnológica Nacional (UTN)",
+        "juanaTitle": "Computer Technician",
+        "juanaInst": "Escuela Técnica N°1 Juana Manso"
+    },
+    "contact": {
+        "title": "Contact",
+        "subtitle": "Let's start a new project",
+        "nameLabel": "Your Name",
+        "emailLabel": "Your Email",
+        "msgLabel": "Your Message",
+        "btnSend": "SEND MESSAGE",
+        "infoTitle": "Direct Info",
+        "infoDesc": "Prefer a more direct approach? Text me on WhatsApp or send a traditional email."
+    },
+        "footer": {
+        "copyright": "© 2026 All rights reserved.",
+        "madeWith": "Forged with"
     }
 }

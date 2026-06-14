@@ -1,0 +1,204 @@
+/* =========================================
+    1. ESTRUCTURA BASE
+   ========================================= */
+.education-section {
+    padding: 100px 20px;
+    background-color: var(--bg-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    transition: background-color 0.3s ease;
+}
+
+.education-container {
+    max-width: 1000px;
+    width: 100%;
+}
+
+.education-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* =========================================
+    2. GRILLA DE CREDENCIALES
+   ========================================= */
+.credentials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* La tarjeta principal ocupa las 2 columnas */
+.featured-card {
+    grid-column: 1 / -1;
+}
+
+.credential-card {
+    position: relative;
+    background: var(--bg-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 40px 30px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.credential-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+    border-color: rgba(229, 9, 20, 0.3);
+}
+
+/* Brillo de fondo sutil para la tarjeta principal */
+.card-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 212, 255, 0.03) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+/* =========================================
+    3. ELEMENTOS DE LA TARJETA
+   ========================================= */
+.year-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    color: #00d4ff;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.4);
+    background: rgba(0, 212, 255, 0.1);
+    padding: 5px 15px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.cred-icon {
+    font-size: 3.5rem;
+    line-height: 1;
+    background: linear-gradient(135deg, var(--accent-red), var(--accent-orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 10px rgba(229, 9, 20, 0.3));
+}
+
+.cred-content {
+    flex: 1;
+}
+
+.cred-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin: 0 0 5px 0;
+    letter-spacing: 1px;
+    padding-right: 60px; /* Evita que el texto pise el año */
+}
+
+.cred-inst {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin: 0 0 20px 0;
+    font-weight: 400;
+}
+
+/* Reutilizamos el estilo visual de los tags, pero sin hover */
+.cred-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* =========================================
+    4. RESPONSIVE Y MODO CLARO
+   ========================================= */
+@media (max-width: 768px) {
+    .credentials-grid {
+        grid-template-columns: 1fr; /* Todo en 1 columna en celulares */
+    }
+    
+    .credential-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px 20px 20px;
+    }
+
+    .cred-title {
+        padding-right: 0;
+        margin-top: 15px;
+    }
+
+    .year-badge {
+        top: 10px;
+        right: 10px;
+        font-size: 1.2rem;
+    }
+
+    .cred-tags {
+        justify-content: center;
+    }
+}
+
+/* Modo claro */
+.light-mode .education-section {
+    background-color: var(--bg-primary); /* Gris muy claro global */
+}
+
+.light-mode .credential-card {
+    background: var(--bg-secondary);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .credential-card:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: var(--accent-red);
+}
+
+.light-mode .year-badge {
+    color: #005bb5;
+    background: rgba(0, 91, 181, 0.1);
+    border-color: rgba(0, 91, 181, 0.2);
+    text-shadow: none;
+}
+
+/* =========================================
+    TÍTULOS ESTILO HEAVY METAL
+   ========================================= */
+.section-title {
+    font-family: 'Metal Mania', system-ui;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--text-primary);
+    margin: 0 0 10px 0;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 0px var(--accent-red); /* La sombra roja 3D de escenario */
+    text-transform: uppercase;
+}
+
+.section-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: #00d4ff;
+    margin: 0;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* Adaptación de títulos para el modo claro */
+.light-mode .section-title {
+    text-shadow: 2px 2px 0px rgba(229, 9, 20, 0.5);
+}
+
+.light-mode .section-subtitle {
+    color: #005bb5;
+}
