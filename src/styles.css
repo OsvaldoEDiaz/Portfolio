@@ -1,3 +1,7 @@
+/* Desplazamiento suave para todos los anclajes de la página */
+html {
+    scroll-behavior: smooth;
+}
 /* Paleta por defecto: Heavy Metal Dark */
 :root {
   --bg-primary: #0a0a0a; /* Negro carbón [cite: 14] */
@@ -24,4 +28,34 @@ body {
     margin: 0;
     padding: 0;
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* =========================================
+    4. BOTÓN DE WHATSAPP FLOTANTE
+   ========================================= */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    z-index: 9000; /* Siempre por encima */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wa-icon {
+    width: 35px;
+    height: 35px;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
 }

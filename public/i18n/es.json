@@ -1,5 +1,6 @@
 {
     "hero": {
+        "greeting": "Hola, soy Osvaldo Diaz",
         "title": "Full Stack Developer",
         "subtitle": "Desarrollador Web & Apps | Técnico en Computación",
         "btnProject": "Ver mi Proyecto Principal",

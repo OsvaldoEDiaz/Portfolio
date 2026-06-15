@@ -1,5 +1,6 @@
 {
     "hero": {
+        "greeting": "Hello, I'm Osvaldo Diaz",
         "title": "Full Stack Developer",
         "subtitle": "Web & App Developer | Computer Technician",
         "btnProject": "View Main Project",

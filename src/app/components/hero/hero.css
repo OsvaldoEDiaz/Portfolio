@@ -74,6 +74,14 @@
     margin-top: 50px; /* Para esquivar el navbar */
 }
 
+.hero-greeting {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: var(--accent-red);
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
 .hero-title {
     font-family: 'Metal Mania', system-ui;
     font-size: clamp(3rem, 8vw, 6rem); /* Responsive automático */
