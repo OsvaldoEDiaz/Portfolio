@@ -19,7 +19,7 @@ Si querés clonar este proyecto y correrlo en tu máquina local, seguí estos pa
 
 1. Cloná el repositorio:
 ```bash
-   git clone [link para clonar mi Portfolio](https://github.com/OsvaldoEDiaz/Portfolio.git)
+   git clone https://github.com/OsvaldoEDiaz/Portfolio.git
 
 2. Instalá las dependencias:
 npm install
@@ -28,4 +28,6 @@ npm install
 ng serve -o
 
 4. Abrí tu navegador y entrá a http://localhost:4200/.
+
+
 Forjado por Osvaldo Diaz.
