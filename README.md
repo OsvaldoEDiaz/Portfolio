@@ -19,7 +19,7 @@ Si querés clonar este proyecto y correrlo en tu máquina local, seguí estos pa
 
 1. Cloná el repositorio:
 ```bash
-   git clone [https://github.com/OsvaldoEDiaz/NOMBRE_DE_TU_REPO.git](https://github.com/OsvaldoEDiaz/NOMBRE_DE_TU_REPO.git)
+   git clone (https://github.com/OsvaldoEDiaz/Portfolio.git)
 
 2. Instalá las dependencias:
 npm install
