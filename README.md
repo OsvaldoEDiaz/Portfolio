@@ -2,18 +2,18 @@
 
 Bienvenido al código fuente de mi portfolio personal. Este proyecto fue desarrollado para mostrar mi experiencia, proyectos destacados y mi stack tecnológico como **Desarrollador Full Stack**.
 
-## 🚀 Características del Proyecto
+## Características del Proyecto
 
 * **Arquitectura Moderna:** Construido con Angular aplicando las últimas convenciones de componentes y ruteo.
 * **Diseño UI/UX:** Interfaz personalizada con temática industrial oscura, totalmente responsive.
 * **Optimizado para Producción:** Estructura modular pensada para un rendimiento rápido y fluido.
 
-## 🛠️ Stack Tecnológico
+## Stack Tecnológico
 
 * **Frontend:** Angular (v21), TypeScript, HTML5, CSS3
 * **Entorno:** Node.js, NPM
 
-## ⚙️ Instalación y Despliegue Local
+## Instalación y Despliegue Local
 
 Si querés clonar este proyecto y correrlo en tu máquina local, seguí estos pasos:
 
