@@ -1,5 +1,3 @@
-import { Service } from '@angular/core';
-
 import { Injectable } from '@angular/core';
 import { ContactMessage, CvDownload } from '../models/contact';
 import { environment } from '../../environments/environment';
