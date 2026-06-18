@@ -20,7 +20,7 @@
     margin-bottom: 60px;
 }
 
-/* Clonamos el estilo Heavy Metal de las secciones anteriores */
+/* Estilo Heavy Metal */
 .section-title {
     font-family: 'Metal Mania', system-ui;
     font-size: clamp(2.5rem, 5vw, 4rem);
@@ -128,7 +128,7 @@
     transition: all 0.3s ease;
 }
 
-/* La magia: Cuando hacés foco o hay texto, la etiqueta sube y se achica */
+/* Cuando se hacés foco o hay texto, la etiqueta sube y se achica */
 .input-group input:focus ~ label,
 .input-group input:not(:placeholder-shown) ~ label,
 .input-group textarea:focus ~ label,
@@ -204,7 +204,7 @@
     font-size: 1.2rem;
     letter-spacing: 2px;
     text-transform: uppercase;
-    cursor: pointer; /* ¡Acá está la magia de la manito! */
+    cursor: pointer; /* la manito! */
     border-radius: 4px;
     transition: all 0.3s ease-in-out;
     display: flex;

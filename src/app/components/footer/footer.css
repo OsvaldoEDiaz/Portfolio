@@ -92,7 +92,7 @@
     opacity: 0.6;
 }
 
-/* Pequeña animación para la mano rockera / corazón */
+/* Animación para la mano rockera */
 @keyframes heartbeat {
     0% { transform: scale(1); }
     10% { transform: scale(1.2); }

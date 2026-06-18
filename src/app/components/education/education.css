@@ -112,7 +112,7 @@
     font-weight: 400;
 }
 
-/* Reutilizamos el estilo visual de los tags, pero sin hover */
+/* Los tags, sin hover */
 .cred-tags {
     display: flex;
     flex-wrap: wrap;
