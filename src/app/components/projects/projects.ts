@@ -46,13 +46,9 @@ export class Projects {
     this.isFullscreen.update(v => !v);
   }
 
-  /**
-   * Busca la miniatura activa en el DOM y desplaza el contenedor horizontal
-   * de forma automática para mantenerla siempre centrada a la vista.
-   */
   private scrollToActiveThumbnail() {
     if (isPlatformBrowser(this.platformId)) {
-      // Le damos un mínimo milisegundo a Angular para que termine de renderizar la clase '.active'
+      // Un mínimo milisegundo para que termine de renderizar la clase '.active'
       setTimeout(() => {
         const activeThumb = document.querySelector('.thumb-box.active');
         if (activeThumb) {

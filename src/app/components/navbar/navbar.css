@@ -174,7 +174,7 @@
     }
 
     .nav-links {
-        /* Cambiamos de absolute a fixed para controlar la ventana lateral */
+        /* Controlar la ventana lateral */
         position: fixed;
         top: 70px; /* Empieza justo debajo del navbar */
         right: -100%; /* Lo escondemos completamente a la derecha fuera de la pantalla */
@@ -194,11 +194,11 @@
         background: rgba(245, 245, 245, 0.98);
     }
 
-    /* Cuando hacés clic y Angular le pone la clase "open", el menú entra a la pantalla */
+    /* Cuando se hace clic y Angular le pone la clase "open", el menú entra a la pantalla */
     .nav-links.open {
         right: 0;
     }
-} /* <--- ACÁ CIERRA EL MEDIA QUERY. Todo lo de abajo aplica en todos los tamaños */
+} 
 
 /* =========================================
     7. AJUSTES PARA EL MODO CLARO (GLOBAL)

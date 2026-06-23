@@ -81,9 +81,9 @@
     margin: 0;
 }
 
-/* =========================================
-    3. TAGS CON HOVER EFFECTS (MAGIA ELÉCTRICA)
-   ========================================= */
+/* ===========================
+    3. TAGS CON HOVER EFFECTS
+   =========================== */
 .tags-container {
     display: flex;
     flex-wrap: wrap;
